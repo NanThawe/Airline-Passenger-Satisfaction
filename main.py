@@ -57,7 +57,7 @@ def satisfaction_deployment():
             inflight_service = st.radio("Inflight service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True) 
             checkin_service = st.radio("Checkin service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)   
         
-        if st.button('**Predict Satsfication**'):
+        if st.button('Predict Satsfication'):
             new_input = np.array([flight_Distance, arrival_delay, age,
                                   Customer_Type, type_of_travel, Class,
                                   online_booking, Leg_room, online_boarding, inflight_service,
