@@ -87,8 +87,7 @@ Predictive models can inform targeted marketing strategies. Airlines can tailor 
    ```
 
 3. Open app on localhost
-   `http://0.0.0.0:8501![image](https://github.com/NanThawe/Airline-Passenger-Satisfaction/assets/74509499/5d5b5a98-b636-4ef0-9009-35f2c852d149)
-`
+   `http://0.0.0.0:8501`
    
    
 
