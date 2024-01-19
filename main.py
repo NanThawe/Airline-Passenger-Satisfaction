@@ -40,7 +40,7 @@ def satisfaction_deployment():
         arrival_delay = st.number_input("Input Arrival Delay (Minutes)".title(), value=df["Arrival Delay in Minutes"].median(), step=10.0)
         age = st.number_input("Age", min_value=1, max_value=100, step=1)
         # Radio button questions arranged side by side
-        col1, col2= st.beta_columns(2)
+        col1, col2= st.columns(2)
 
         with col1:
             Leg_room = st.radio("Leg room service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
