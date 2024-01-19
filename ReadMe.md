@@ -22,6 +22,8 @@ Predictive models can inform targeted marketing strategies. Airlines can tailor 
 
 ## Data description
 
+**Link to Dataset** : https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction/data 
+
 **Gender**: Gender of the passengers (Female, Male)
 
 **Customer Type**: The customer type (Loyal customer, disloyal customer)
@@ -71,3 +73,22 @@ Predictive models can inform targeted marketing strategies. Airlines can tailor 
 # Steamlit App
 [Airline Passenger Satisfaction Steamlit App link](https://airline-passenger-satisfaction.streamlit.app/)
 ![Screenshot of the Steamlit app](https://github.com/NanThawe/Airline-Passenger-Satisfaction/blob/main/steamlit_app.png)
+
+# Docker 
+1. Build the Docker image
+   ```
+   docker build -t airline-steamlit .
+
+   ```
+2. Run the Docker container
+   ```
+   docker run -p 8501:8501 airline-steamlit
+
+   ```
+
+3. Open app on localhost
+   `http://0.0.0.0:8501![image](https://github.com/NanThawe/Airline-Passenger-Satisfaction/assets/74509499/5d5b5a98-b636-4ef0-9009-35f2c852d149)
+`
+   
+   
+
