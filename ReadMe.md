@@ -70,3 +70,4 @@ Predictive models can inform targeted marketing strategies. Airlines can tailor 
 
 # Steamlit App
 [Airline Passenger Satisfaction Steamlit App link](https://airline-passenger-satisfaction.streamlit.app/)
+![Screenshot of the Steamlit app](https://github.com/NanThawe/Airline-Passenger-Satisfaction/blob/main/steamlit_app.png)
