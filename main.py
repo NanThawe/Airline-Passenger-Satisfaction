@@ -38,20 +38,24 @@ def satisfaction_deployment():
         # numerical features
         flight_Distance = st.number_input("Input approximate flight distance".title(), value=int(df["Flight Distance"].mean()), step=100)
         arrival_delay = st.number_input("Input Arrival Delay (Minutes)".title(), value=df["Arrival Delay in Minutes"].median(), step=10.0)
-        age = st.slider("Age", min_value=1, max_value=100, step=1)
-        
-        Leg_room = st.radio("Leg room service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        food_drink = st.radio("Food and drink rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        online_boarding = st.radio("Online boarding rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        baggage_handling = st.radio("Baggage handling rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        onboard_service = st.radio("On-board service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        inflight_wifi = st.radio("Inflight wifi service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        online_booking = st.radio("Online booking rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        cleanliness = st.radio("Cleanliness rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        inflight_entertainment = st.radio("Inflight entertainment rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        inflight_service = st.radio("Inflight service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        seat_comfort = st.radio("Seat comfort rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
-        checkin_service = st.radio("Checkin service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)        
+        age = st.number_input("Age", min_value=1, max_value=100, step=1)
+        # Radio button questions arranged side by side
+        col1, col2= st.beta_columns(2)
+
+        with col1:
+            Leg_room = st.radio("Leg room service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            online_boarding = st.radio("Online boarding rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            onboard_service = st.radio("On-board service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            online_booking = st.radio("Online booking rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            inflight_entertainment = st.radio("Inflight entertainment rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            seat_comfort = st.radio("Seat comfort rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+        with col2:
+            food_drink = st.radio("Food and drink rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            baggage_handling = st.radio("Baggage handling rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            inflight_wifi = st.radio("Inflight wifi service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)  
+            cleanliness = st.radio("Cleanliness rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)
+            inflight_service = st.radio("Inflight service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True) 
+            checkin_service = st.radio("Checkin service rate", options=[0, 1, 2, 3, 4, 5] , horizontal=True)   
         
         if st.button('Predict Satsfication'):
             new_input = np.array([flight_Distance, arrival_delay, age,
