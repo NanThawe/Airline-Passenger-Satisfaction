@@ -26,6 +26,7 @@ st.set_page_config(
     page_title='Airline Passenger Satisfaction App',
     page_icon='👥'
 )
+st.write("<h1 style='text-align: center; color: white'>Airline Passenger Satisfaction Prediction</h1>", unsafe_allow_html=True)
 
 def satisfaction_deployment():
         
