@@ -86,8 +86,12 @@ Predictive models can inform targeted marketing strategies. Airlines can tailor 
 
    ```
 
-3. Open app on localhost
-   `http://0.0.0.0:8501`
+3. Open app on localhost  `http://0.0.0.0:8501`
+
+   #### Although I couldn't deploy to cloud due to some limitations: my docker image deployment couldn't be initiated due to "ECS Deployment Circuit Breaker was triggered" error and another error related to EC2 memory and gpu capacity. 
+
+   #### Overall, I learnt alot from this project. Please do let me know for suggestions.
+   **Thank you for your evaluation and feedback in advance.** 
    
    
 
